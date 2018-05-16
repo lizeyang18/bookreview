@@ -5,8 +5,8 @@
   <% if user_signed_in? %>
       <% if review.user_id == current_user.id %>
       <div class="links btn-group">
-        <%= link_to "Edit", edit_book_review_path(review.book, review), class: "btn btn-custom" %>
-        <%= link_to "Delete", book_review_path(review.book, review), method: :delete, data: {confirm: "Are you sure about that?"}, class: "btn btn-custom" %>
+        <%= link_to t('edit-rev'), edit_book_review_path(review.book, review), class: "btn btn-custom" %>
+        <%= link_to t('delete-rev'), book_review_path(review.book, review), method: :delete, data: {confirm: t('delete-confirm') }, class: "btn btn-custom" %>
       </div>
     <% end %>
   <% end %>

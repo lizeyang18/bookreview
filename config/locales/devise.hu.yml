@@ -1,5 +1,6 @@
 # Additional translations at http://github.com/plataformatec/devise/wiki/I18n
 
+
 hu:
   errors:
     messages:
@@ -59,3 +60,6 @@ hu:
           attributes:
             password:
               too_short: 'A jelszó túl rövid!'
+              blank: "A jelszó mező üres!"
+            email:
+              blank: "Az email mező üres!"

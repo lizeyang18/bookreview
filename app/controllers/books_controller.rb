@@ -62,5 +62,6 @@ class BooksController < ApplicationController
 
     def find_book
       @book = Book.find(params[:id])
+      @stores = ActiveRecord::Base.connection.exec_query("select name from stores where id IN (select store_id from books_stores where book_id=#{@book.id})")
     end
 end

@@ -22,6 +22,8 @@ gem 'simple_form', '~> 4.0'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'jquery-rails'
 gem 'paperclip', '~> 6.0'
+gem 'faker'
+gem 'populator'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

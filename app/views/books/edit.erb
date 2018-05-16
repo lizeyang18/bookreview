@@ -1,13 +1,13 @@
 <div class="col-md-6 col-md-offset-3">
   <div class="edit-review-form">
-    <h1>Edit Book</h1>
+    <h1><%= t('edit-book') %>>k</h1>
 
     <%= simple_form_for @book, :html => { :multipart => true } do |f| %>
       <%= f.select :category_id, @categories %>
       <%= f.file_field :book_img  %>
-      <%= f.input  :title, label: "Book Title"  %>
-      <%= f.input  :description  %>
-      <%= f.input  :author  %>
+      <%= f.input  :title, label: t('book-title')  %>
+      <%= f.input  :description, label: t('book-desc')  %>
+      <%= f.input  :author, label: t('book-author')  %>
       <%= f.button :submit, :class => 'btn-custom2' %>
     <% end %>
   </div>

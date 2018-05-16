@@ -6,12 +6,16 @@
 
     <div class="book-info">
       <h2 class="book-title"><%= @book.title %></h2>
-      <h4 class="book-author"><span>From </span><%= @book.author %></h4>
-      <h2 class="avg-rating">Average rating:</h2>
+      <h4 class="book-author"><span><%= t('from', author: @book.author) %></span></h4>
+      <h2 class="avg-rating"><%= t('avg-rating') %></h2>
       <div class="average-review-rating" data-score=<%= @average_review %> ></div>
       <span class="number-of-reviews">
-        Based on <%= @book.reviews.count %> reviews.
+        <%= t('based-on', count: @book.reviews.count) %>
       </span>
+      <h5 class="book-stores"> <%= t('stores-where') %> </h5>
+      <% @stores.each do |store| %>
+       <span class="number-of-reviews"> <%= store['name']  %>,</span>
+      <% end %>
       <p class="book-desc"><%= @book.description %></p>
     </div>
   </div>
@@ -21,22 +25,22 @@
   <div class="col-md-4">
 
     <div class="reviews">
-      <h1>Reviews</h1>
+      <h1><%= t('reviews') %></h1>
       <%= render @book.reviews %>
         <% if user_signed_in? %>
-          <%= link_to "Add Review", new_book_review_path(@book), class: "btn btn-custom" %>
+          <%= link_to t('add-review'), new_book_review_path(@book), class: "btn btn-custom" %>
         <% end %>
     </div>
   </div>
 </div>
 
 <div class="links btn-group">
-  <%= link_to "Back", root_path, class: "btn btn-custom"  %>
+  <%= link_to t('back'), root_path, class: "btn btn-custom"  %>
 
   <% if user_signed_in? %>
     <% if @book.user_id == current_user.id %>
-      <%= link_to "Edit", edit_book_path(@book), class: "btn btn-custom" %>
-      <%= link_to "Delete", book_path(@book), method: :delete, data: {confirm: "Are you sure about that?"}, class: "btn btn-custom" %>
+      <%= link_to t('edit'), edit_book_path(@book), class: "btn btn-custom" %>
+      <%= link_to t('delete'), book_path(@book), method: :delete, data: {confirm: t('delete-confirm') }, class: "btn btn-custom" %>
     <% end %>
   <% end %>
 </div>
