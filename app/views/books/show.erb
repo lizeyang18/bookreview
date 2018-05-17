@@ -13,8 +13,12 @@
         <%= t('based-on', count: @book.reviews.count) %>
       </span>
       <h5 class="book-stores"> <%= t('stores-where') %> </h5>
-      <% @stores.each do |store| %>
-       <span class="number-of-reviews"> <%= store['name']  %>,</span>
+      <% if @stores.count == 0 %>
+        <span class="number-of-reviews"> - </span>
+      <% else %>
+        <% @stores.each do |store| %>
+          <span class="number-of-reviews"> <%= store['name']  %>,</span>
+        <% end %>
       <% end %>
       <p class="book-desc"><%= @book.description %></p>
     </div>
