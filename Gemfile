@@ -23,7 +23,6 @@ gem 'jquery-rails'
 gem 'paperclip', '~> 6.0'
 gem 'faker'
 gem 'populator'
-gem 'pg'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
