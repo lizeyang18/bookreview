@@ -65,3 +65,6 @@ class BooksController < ApplicationController
       @stores = ActiveRecord::Base.connection.exec_query("select name from stores where id IN (select store_id from books_stores where book_id=#{@book.id})")
     end
 end
+
+# 重新导入的项目，这里部分做了改变--周 正
+# 项目这部分和原来的项目做了改变
