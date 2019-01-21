@@ -34179,3 +34179,41 @@ puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   ↳ db/seeds.rb:4
   [1m[36mReview Last ID (0.1ms)[0m  [1m[34mSELECT id FROM "reviews" ORDER BY id DESC[0m
   ↳ db/seeds.rb:13
+Started GET "/" for 202.196.240.226 at 2019-01-20 02:38:05 +0000
+Cannot render console from 202.196.240.226! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by BooksController#index as HTML
+  Rendering books/index.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/views/books/index.erb:3
+  Rendered books/index.erb within layouts/application (183.3ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 477ms (Views: 452.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 202.196.240.226 at 2019-01-20 02:38:13 +0000
+Cannot render console from 202.196.240.226! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/views/books/index.erb:3
+  Rendered books/index.erb within layouts/application (2.1ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 113ms (Views: 110.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 202.196.240.226 at 2019-01-20 02:38:14 +0000
+Cannot render console from 202.196.240.226! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/views/books/index.erb:3
+  Rendered books/index.erb within layouts/application (2.1ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 104ms (Views: 101.3ms | ActiveRecord: 0.8ms)
+
+

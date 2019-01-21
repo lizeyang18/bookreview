@@ -66,5 +66,3 @@ class BooksController < ApplicationController
     end
 end
 
-# 重新导入的项目，这里部分做了改变--周 正
-# 项目这部分和原来的项目做了改变
