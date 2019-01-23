@@ -56,10 +56,10 @@ $ sudo apt-get install imagemagick --fix-missing
 $ rails server -b $IP -p $PORT  //即可运行
 ```
 2.账号  
-用户名：`278845421@qq.com`  
-密码：`123456`  
+&emsp;&emsp;用户名：`278845421@qq.com`  
+&emsp;&emsp;密码：`123456`  
 3.部署到heroku  
-通过上述C9的实施成功后，就可以将项目部署到heroku上  
+&emsp;&emsp;通过上述C9的实施成功后，就可以将项目部署到heroku上  
 ```
 $ heroku login
 $ heroku create
